@@ -1,0 +1,237 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:url("photos/reception.jpg") center center/cover no-repeat fixed;
+    min-height:100vh;
+}
+
+.overlay{
+    width:100%;
+    min-height:100vh;
+    background:rgba(0,0,0,.60);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px 15px;
+}
+
+.card{
+    width:100%;
+    max-width:430px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border-radius:25px;
+    padding:30px 25px;
+    text-align:center;
+    color:#fff;
+    box-shadow:0 15px 45px rgba(0,0,0,.35);
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.logo{
+    width:90px;
+    margin-bottom:15px;
+}
+
+.profile{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #fff;
+    margin:10px auto 20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+h1{
+    font-size:32px;
+    font-weight:700;
+}
+
+h2{
+    font-size:18px;
+    color:#ffd54f;
+    margin-top:6px;
+}
+
+.about{
+    margin:18px 0 25px;
+    line-height:1.7;
+    font-size:14px;
+    color:#f1f1f1;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    padding:13px;
+    text-decoration:none;
+    border:none;
+    border-radius:12px;
+    background:#ffffff;
+    color:#222;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+.green{
+    background:#25D366;
+    color:#fff;
+}
+
+.blue{
+    background:#1877F2;
+    color:#fff;
+}
+
+.orange{
+    background:#ff9800;
+    color:#fff;
+}
+
+h3{
+    margin:35px 0 20px;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+}
+
+/* Services Styles */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.service-item {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.service-item:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
+.service-item i {
+    font-size: 24px;
+    color: #ffd54f;
+}
+
+.service-item span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* QR Code Styles */
+.qr-container {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* Map Styles */
+.map-container {
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.footer{
+    margin-top:30px;
+    color:#ddd;
+    font-size:13px;
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media(max-width:480px){
+    .card{
+        padding:25px 18px;
+    }
+    .profile{
+        width:130px;
+        height:130px;
+    }
+    .buttons{
+        grid-template-columns:1fr;
+    }
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
